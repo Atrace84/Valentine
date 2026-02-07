@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Yes! 💖</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background-color: rgb(231, 84, 84);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: white;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.5rem;
+        max-width: 600px;
+    }
+    body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle, #ffd6e8, #ff9ecf);
+  overflow: hidden;
+}
+
+.hearts {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  bottom: -30px;
+  font-size: 24px;
+  animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+<body>
+<div class="hearts"></div>
+    <script>
+    const heartsContainer = document.querySelector(".hearts");
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "💗";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 16 + "px";
+  heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+
+  heartsContainer.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 7000);
+}
+
+setInterval(createHeart, 300);
+    </script>
+    <div>
+        <h1>Mhh that's cute💕</h1>
+        <p>Thank you for being my Valentine! I just want you to know how much I love you and how happy I am to have you. I am to have you in my life. 🥰 Every day with you is special and I can't wait to make more memories together. Sending love and kisses</p>
+    </div>
+    
+</body>
+</html>
