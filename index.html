@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Proposal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="background"></div>
+
+    <div class="content">
+    <h1><b>Will you be my Valentine Mncedisi?</b></h1>
+    <h2><button id="yesBtn" onclick="window.location.href='yes.html'">Yes 😍</button>
+    <button id="noBtn" onclick="window.location.href='no.html'">No 🥲</button></h2>
+    <h2>LOL, it's a yes obviously</h2>
+    </div>
+      <script>
+  const noBtn = document.getElementById("noBtn");
+  let runCount = 0;
+
+  noBtn.addEventListener("mouseenter", () => {
+    if (runCount >= 5) return; // stops running
+
+    runCount++;
+
+    const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+    const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+
+    noBtn.style.left = `${x}px`;
+    noBtn.style.top = `${y}px`;
+  });
+    </script>
+</body>
+</html>
